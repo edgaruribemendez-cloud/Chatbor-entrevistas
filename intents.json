@@ -1,0 +1,144 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "Hola",
+        "Buenos días",
+        "Estoy listo",
+        "Hola, empecemos la entrevista",
+        "Buenas tardes",
+        "Qué tal"
+      ],
+      "responses": [
+        "¡Excelente! Comencemos. Cuéntame brevemente, ¿cuál es tu experiencia principal en tecnología?"
+      ]
+    },
+    {
+      "tag": "experiencia",
+      "patterns": [
+        "Trabajé como desarrollador web",
+        "Tengo experiencia en Python y bases de datos",
+        "He hecho proyectos escolares y freelance",
+        "He trabajado en soporte técnico",
+        "He desarrollado aplicaciones backend",
+        "He colaborado en equipos de software"
+      ],
+      "responses": [
+        "Interesante perfil. Ahora dime: ¿Cómo manejas una situación de alta presión o un proyecto con fechas límite muy cerradas?"
+      ]
+    },
+    {
+      "tag": "habilidades",
+      "patterns": [
+        "Tengo habilidades en JavaScript",
+        "Se programar en Python y SQL",
+        "Manejo HTML CSS y React",
+        "Sé trabajar con bases de datos",
+        "Tengo conocimientos en Git y GitHub",
+        "Me gusta aprender nuevas tecnologías"
+      ],
+      "responses": [
+        "Muy bien. Me gustaría saber si te sientes cómodo resolviendo problemas complejos y trabajando con documentación técnica."
+      ]
+    },
+    {
+      "tag": "proyectos",
+      "patterns": [
+        "He desarrollado un proyecto de e-commerce",
+        "Creé una aplicación de gestión escolar",
+        "Trabajé en un sistema de reservas",
+        "Tengo proyectos personales en GitHub",
+        "He hecho dashboards para análisis de datos",
+        "Desarrollé un chatbot con Python"
+      ],
+      "responses": [
+        "Eso suena muy bien. ¿Podrías contarme qué problema resolvía tu proyecto y qué tecnologías usaste para hacerlo?"
+      ]
+    },
+    {
+      "tag": "equipo",
+      "patterns": [
+        "Me gusta trabajar en equipo",
+        "Colaboro bien con otros desarrolladores",
+        "Participo en reuniones de coordinación",
+        "Escucho ideas de mi equipo",
+        "Trabajo bien con diseño y QA",
+        "Me adapto a diferentes roles del proyecto"
+      ],
+      "responses": [
+        "Excelente. La capacidad de colaborar es clave en tecnología. ¿Cómo te comunicas con personas de otros departamentos o perfiles?"
+      ]
+    },
+    {
+      "tag": "aprendizaje",
+      "patterns": [
+        "Estoy abierto a aprender",
+        "Me gusta actualizarme en nuevas tecnologías",
+        "Siempre busco mejorar mis habilidades",
+        "Aprendo rápido con práctica",
+        "Tengo ganas de seguir creciendo profesionalmente",
+        "Me interesa estudiar IA y automatización"
+      ],
+      "responses": [
+        "Es muy positivo que estés en constante aprendizaje. ¿Qué tecnología te gustaría dominar más en el futuro cercano?"
+      ]
+    },
+    {
+      "tag": "presion",
+      "patterns": [
+        "Me organizo bien",
+        "Trabajo bajo presión priorizando tareas",
+        "Mantengo la calma y planifico",
+        "Uso listas de tareas y plazos",
+        "Divido el trabajo por prioridad",
+        "Me adapto a cambios de última hora"
+      ],
+      "responses": [
+        "Muy buena respuesta. Para terminar, ¿por qué deberíamos contratarte a ti y no a otro candidato?"
+      ]
+    },
+    {
+      "tag": "disponibilidad",
+      "patterns": [
+        "Estoy disponible para trabajar a tiempo completo",
+        "Puedo adaptarme a horarios flexibles",
+        "Estoy disponible de inmediato",
+        "Tengo disponibilidad para proyectos remotos",
+        "Puedo colaborar presencial o remoto",
+        "Estoy listo para empezar"
+      ],
+      "responses": [
+        "Perfecto. La disponibilidad también es importante. ¿Qué tipo de entorno laboral te motiva más: remoto, híbrido o presencial?"
+      ]
+    },
+    {
+      "tag": "cierre",
+      "patterns": [
+        "Porque soy responsable",
+        "Tengo muchas ganas de aprender y aportar",
+        "Me adapto rápido",
+        "Porque tengo actitud y disposición",
+        "Porque puedo aportar valor desde el primer día",
+        "Porque soy constante y comprometido"
+      ],
+      "responses": [
+        "¡Perfecto! Has completado la simulación con éxito. Tienes buenas bases para tu entrevista."
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "Gracias",
+        "Muchas gracias",
+        "Hasta luego",
+        "Adiós",
+        "Gracias por la entrevista",
+        "Fue un gusto hablar contigo"
+      ],
+      "responses": [
+        "Gracias a ti. Espero que tengas mucho éxito en tu proceso de selección y en tu carrera profesional."
+      ]
+    }
+  ]
+}
