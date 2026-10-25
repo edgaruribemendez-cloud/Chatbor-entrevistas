@@ -17,3 +17,5 @@ Archivo Base (Chatbot.py)
 Archivo intents.json que funciona como base de conocimiento
 
 
+## NOTA
+El archivo intents.json se debe de encontrar en la misma ruta en la que se encuentra el archivo Chatbot.py

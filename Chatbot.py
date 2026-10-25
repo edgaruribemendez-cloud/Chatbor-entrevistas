@@ -14,22 +14,22 @@ nltk.download('omw-1.4')
 
 lemmatizer = WordNetLemmatizer()
 
-# 1. Cargar el dataset de intenciones (intents.json)
+#Carga base de conocimiento
 rutaBase =pathlib.Path(__file__).resolve()
-print(rutaBase.parent) # Imprime el directorio de trabajo actual para verificar la ruta
+print(rutaBase.parent) 
 with open(rutaBase.parent / 'intents.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
-# Función clave utilizando NLTK para limpiar y normalizar el texto
+
 def limpiar_y_procesar(texto):
-    # Tokenizar (dividir en palabras) y pasar a minúsculas
+    # Tokenización(dividir en palabras) y pasar a minúsculas
     tokens = nltk.word_tokenize(texto.lower())
     # Lematizar (reducir la palabra a su raíz, ej: "corriendo" -> "correr")
     tokensLimpios = [lemmatizer.lemmatize(token) for token in tokens if token.isalnum()]
-    #print(tokensLimpios)  # Imprime los tokens limpios para depuración
+    #print(tokensLimpios)  
     return " ".join(tokensLimpios)
 
-# 2. Preparar los datos de entrenamiento
+#Prepara datos para entrenamiento
 texts = []
 labels = []
 respuestaDict = {}
@@ -38,19 +38,19 @@ for intent in data['intents']:
     tag = intent['tag']
     respuestaDict[tag] = intent['responses']
     for pattern in intent['patterns']:
-        # Aplicamos el procesamiento de NLTK a cada patrón de entrenamiento
+        
         texto_procesado = limpiar_y_procesar(pattern)
         texts.append(texto_procesado)
         labels.append(tag)
 
-# 3. Vectorización y Modelo de Machine Learning
+#Vectorización y entrenamiento del modelo
 vectorizador = TfidfVectorizer()
 X = vectorizador.fit_transform(texts)
 model = LogisticRegression()
 model.fit(X, labels)
 
 
-# 4. Bucle principal de la entrevista
+#Entrevista
 def iniciar_chat():
     print("Bot: ¡Hola! Bienvenido al simulador de entrevistas. ¿Cómo te llamas y qué puesto buscas?")
     
@@ -64,16 +64,17 @@ def iniciar_chat():
         if not user_input:
             continue
 
-        # Procesar la entrada del usuario usando NLTK
+        
         input_procesado = limpiar_y_procesar(user_input)
         
-        # Vectorizar y predecir la intención
+        
         X_test = vectorizador.transform([input_procesado])
         prediccion = model.predict(X_test)[0]
         
-        # Seleccionar una respuesta aleatoria de la intención detectada
+       
         respuesta = random.choice(respuestaDict[prediccion])
         print(f"\nBot: {respuesta}\n")
 
+#Ejecucion del chatbot
 if __name__ == "__main__":
     iniciar_chat()
